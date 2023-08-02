@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <title>Credential</title>
+</head>
+<h2>Registration Form</h2>
+<body>
+<form action="register" method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" id="username" autocomplete="off" placeholder="UserName"><br>
+    <input type="text" name="firstname" placeholder="FirstName"><br>
+    <input type="text" name="lastname" placeholder="LastName"><br>
+    <input type="email" name="email" id="email" autocomplete="off" placeholder="Email"><br>
+    <input type="password" name="password" placeholder="Password"><br>
+    <input type="password" name="confirmpassword" placeholder="Confirm Password"><br>
+    <input type="submit"><br>
+</form>
+{ % for mes in messages % }
+{{mes}}
+{ % endfor % }
+</body>
+</html>
